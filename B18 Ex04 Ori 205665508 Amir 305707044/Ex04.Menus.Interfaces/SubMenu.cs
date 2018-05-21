@@ -8,7 +8,7 @@ namespace Ex04.Menus.Interfaces
         private const uint k_LeaveSubMenu = 0;
         private List<MenuBar> m_SubMenuOptions;
 
-        public SubMenu(string o_Name, MenuBar o_Parent) : base(o_Name, o_Parent)
+        public SubMenu(string o_Name, SubMenu o_Parent) : base(o_Name, o_Parent)
         { }
 
 

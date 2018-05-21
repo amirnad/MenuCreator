@@ -9,7 +9,7 @@ namespace Ex04.Menus.Interfaces
     public class Menu : SubMenu
     {
 
-        public Menu(string o_Name, MenuBar o_Parent) : base(o_Name, o_Parent) { }
+        public Menu(string o_Name, SubMenu o_Parent) : base(o_Name, o_Parent) { }
         public void ShowMenu()
         {
             Console.Clear();

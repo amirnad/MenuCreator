@@ -1,11 +1,11 @@
 ﻿namespace Ex04.Menus.Interfaces
 {
-    public class MenuBar
+    public abstract class MenuBar
     {
         private readonly string r_ButtonName;
-        protected MenuBar m_ButtonParent;
+        protected SubMenu m_ButtonParent;
 
-        public MenuBar(string i_Name, MenuBar i_Parent)
+        public MenuBar(string i_Name, SubMenu i_Parent)
         {
             r_ButtonName = i_Name;
             m_ButtonParent = i_Parent;
