@@ -6,14 +6,18 @@ using System.Threading.Tasks;
 
 namespace Ex04.Menus.Interfaces
 {
-    public class Menu : SubMenu
+    public class Menu 
     {
+        private SubMenu m_MainMenu;
 
-        public Menu(string o_Name, SubMenu o_Parent) : base(o_Name, o_Parent) { }
+        public Menu(string o_Name, SubMenu o_Parent)
+        {
+            m_MainMenu = new SubMenu(o_Name, o_Parent);
+        }
         public void ShowMenu()
         {
             Console.Clear();
-            ExecuteMenuButton();
+            m_MainMenu.ExecuteMenuButton();
         }
 
 

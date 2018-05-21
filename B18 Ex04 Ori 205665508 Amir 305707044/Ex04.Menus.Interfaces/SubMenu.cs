@@ -6,11 +6,15 @@ namespace Ex04.Menus.Interfaces
     public class SubMenu : MenuBar
     {
         private const uint k_LeaveSubMenu = 0;
-        private List<MenuBar> m_SubMenuOptions;
+        private List<MenuBar> m_SubMenuOptions = new List<MenuBar>();
 
         public SubMenu(string o_Name, SubMenu o_Parent) : base(o_Name, o_Parent)
         { }
 
+        public void AddMenuButton(MenuBar o_ButtonToAdd)
+        {
+            m_SubMenuOptions.Add(o_ButtonToAdd);
+        }
 
         public override void ExecuteMenuButton()
         {
@@ -72,6 +76,7 @@ namespace Ex04.Menus.Interfaces
                 Environment.Exit(0);
             }
         }
+
         private void showAllButtons()
         {
             const string k_Border = "==========================";
