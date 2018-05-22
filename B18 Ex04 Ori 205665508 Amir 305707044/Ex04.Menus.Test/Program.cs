@@ -6,12 +6,19 @@ using System.Threading.Tasks;
 
 namespace Ex04.Menus.Test
 {
-    class Program
+    public class Program
     {
         public static void Main()
         {
-            interfacesTest.RunInterFaceTest();
-            delegatesTests.runDelegatesTest();
+            try
+            {
+                interfacesTest.RunInterFaceTest();
+                delegatesTests.runDelegatesTest();
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.Message);
+            }
         }
     }
 }

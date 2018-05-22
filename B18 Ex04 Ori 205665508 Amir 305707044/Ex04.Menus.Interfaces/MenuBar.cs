@@ -17,6 +17,5 @@
         }
 
         public abstract void ExecuteMenuButton();
-
     }
 }

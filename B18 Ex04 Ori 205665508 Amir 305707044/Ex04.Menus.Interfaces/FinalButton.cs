@@ -11,7 +11,7 @@ namespace Ex04.Menus.Interfaces
     {
         private readonly IActionButtonListener r_ActionListener;
 
-        public FinalButton(string o_Name, SubMenu o_Parent, IActionButtonListener i_Listener) :base(o_Name, o_Parent)
+        public FinalButton(string o_Name, SubMenu o_Parent, IActionButtonListener i_Listener) : base(o_Name, o_Parent)
         {
             r_ActionListener = i_Listener;
         }

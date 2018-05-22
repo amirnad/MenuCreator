@@ -16,16 +16,16 @@ namespace Ex04.Menus.Test
             Delegates.SubMenu timeAndDate = new Delegates.SubMenu("show Time/Date", mainMenu);
             Delegates.SubMenu versionAndCapitals = new Delegates.SubMenu("version and capitals", mainMenu);
             Delegates.FinalButton showTime = new Delegates.FinalButton("show time", timeAndDate);
-            showTime.Selected += allFunctionality.showTime;
+            showTime.OptionSelectedEventHandler += allFunctionality.showTime;
 
             Delegates.FinalButton showDate = new Delegates.FinalButton("show Date", timeAndDate);
-            showDate.Selected += allFunctionality.showDate;
+            showDate.OptionSelectedEventHandler += allFunctionality.showDate;
 
             Delegates.FinalButton CapitalLettersCount = new Delegates.FinalButton("Count capitals", versionAndCapitals);
-            CapitalLettersCount.Selected += allFunctionality.CapitalLettersProcess;
+            CapitalLettersCount.OptionSelectedEventHandler += allFunctionality.CapitalLettersProcess;
 
             Delegates.FinalButton showVersion = new Delegates.FinalButton("show version", versionAndCapitals);
-            showVersion.Selected += allFunctionality.ShowVersion;
+            showVersion.OptionSelectedEventHandler += allFunctionality.ShowVersion;
 
             mainMenu.AddMenuButton(timeAndDate);
             mainMenu.AddMenuButton(versionAndCapitals);
@@ -35,7 +35,6 @@ namespace Ex04.Menus.Test
 
             versionAndCapitals.AddMenuButton(CapitalLettersCount);
             versionAndCapitals.AddMenuButton(showVersion);
-
 
             mainMenu.ShowMenu();
         }

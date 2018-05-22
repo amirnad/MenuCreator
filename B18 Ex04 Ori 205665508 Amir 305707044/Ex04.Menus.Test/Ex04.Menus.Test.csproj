@@ -38,7 +38,9 @@
   <ItemGroup>
     <Compile Include="SystemButtons\CapitalsBridge.cs" />
     <Compile Include="SystemButtons\DateShowerBridge.cs" />
-    <Compile Include="delegatesTests.cs" />
+    <Compile Include="delegatesTests.cs">
+      <ExcludeFromStyleCop>False</ExcludeFromStyleCop>
+    </Compile>
     <Compile Include="interfacesTest.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="SystemFunctionality.cs" />

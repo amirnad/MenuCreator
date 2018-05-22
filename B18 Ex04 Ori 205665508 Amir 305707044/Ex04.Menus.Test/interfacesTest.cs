@@ -7,10 +7,8 @@ using Ex04.Menus;
 
 namespace Ex04.Menus.Test
 {
-
     public class interfacesTest
     {
-
         public static void RunInterFaceTest()
         {
             Interfaces.Menu mainMenu = new Interfaces.Menu("main");
@@ -32,7 +30,6 @@ namespace Ex04.Menus.Test
 
             versionAndCapitals.AddMenuButton(showVersion);
             versionAndCapitals.AddMenuButton(CapitalLettersCount);
-
 
             mainMenu.ShowMenu();
         }

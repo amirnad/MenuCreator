@@ -9,13 +9,18 @@ namespace Ex04.Menus.Delegates
 {
     public class FinalButton : MenuBar
     {
-        public event Action Selected; 
+        public event Action OptionSelectedEventHandler;
 
-        public FinalButton(string o_Name, SubMenu o_Parent) :base(o_Name, o_Parent)
+        public FinalButton(string o_Name, SubMenu o_Parent) : base(o_Name, o_Parent)
         {
         }
 
         public override void ExecuteMenuButton()
+        {
+            menuOption_OptionSelectedEventHandler();
+        }
+
+        private void menuOption_OptionSelectedEventHandler()
         {
             Console.Clear();
             OnSelected();
@@ -23,11 +28,12 @@ namespace Ex04.Menus.Delegates
             Console.Clear();
             m_ButtonParent.ExecuteMenuButton();
         }
+
         private void OnSelected()
         {
-            if (Selected!= null)
+            if (OptionSelectedEventHandler != null)
             {
-                Selected.Invoke();
+                OptionSelectedEventHandler.Invoke();
             }
             else
             {

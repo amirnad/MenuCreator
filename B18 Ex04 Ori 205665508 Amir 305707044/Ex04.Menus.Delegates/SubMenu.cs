@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
+
 namespace Ex04.Menus.Delegates
 {
     public class SubMenu : MenuBar
@@ -9,7 +10,8 @@ namespace Ex04.Menus.Delegates
         private List<MenuBar> m_SubMenuOptions = new List<MenuBar>();
 
         public SubMenu(string o_Name, SubMenu o_Parent) : base(o_Name, o_Parent)
-        { }
+        {
+        }
 
         public void AddMenuButton(MenuBar o_ButtonToAdd)
         {
@@ -37,14 +39,13 @@ namespace Ex04.Menus.Delegates
             {
                 userInput = Console.ReadLine();
                 doneReading = checkInput(userInput);
-                if(!doneReading)
+                if (!doneReading)
                 {
                     Console.WriteLine(k_InvalidChoiceMessage);
                 }
             }
 
             o_UserChoice = uint.Parse(userInput);
-
         }
 
         private bool checkInput(string i_UserInput)
@@ -53,17 +54,18 @@ namespace Ex04.Menus.Delegates
             uint userChoice;
 
             isInputLegal = uint.TryParse(i_UserInput, out userChoice);
-            if(isInputLegal)
+            if (isInputLegal)
             {
                 isInputLegal = userChoice >= k_LeaveSubMenu && userChoice <= m_SubMenuOptions.Count;
             }
+
             return isInputLegal;
         }
 
         private void executeChoice(uint i_UserChoice)
         {
-            int realButton = (int)i_UserChoice-1;
-            if(i_UserChoice != k_LeaveSubMenu)
+            int realButton = (int)i_UserChoice - 1;
+            if (i_UserChoice != k_LeaveSubMenu)
             {
                 m_SubMenuOptions[realButton].ExecuteMenuButton();
             }
@@ -71,6 +73,18 @@ namespace Ex04.Menus.Delegates
             {
                 m_ButtonParent.ExecuteMenuButton();
             }
+            else
+            {
+                exitDelegateSubMenu();
+            }
+        }
+
+        private void exitDelegateSubMenu()
+        {
+            Console.Clear();
+            Console.WriteLine("Leaving Delegates Menu. BYE BYE!");
+            System.Threading.Thread.Sleep(300);
+            Console.Clear();
         }
 
         private void showAllButtons()
@@ -86,7 +100,7 @@ namespace Ex04.Menus.Delegates
         {
             StringBuilder menuButtons = new StringBuilder();
             const string k_BackMessage = "0. Back";
-            
+
             int menuOption;
             menuButtons.AppendFormat(k_BackMessage);
             menuButtons.AppendFormat(Environment.NewLine);
@@ -96,8 +110,8 @@ namespace Ex04.Menus.Delegates
                 menuOption++;
                 menuButtons.AppendFormat("{0}. {1}{2}", menuOption, button.ButtonName, Environment.NewLine);
             }
+
             Console.WriteLine(menuButtons);
         }
-
     }
 }

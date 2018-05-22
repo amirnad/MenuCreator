@@ -8,15 +8,14 @@ namespace Ex04.Menus.Interfaces
 {
     public class Menu : SubMenu
     {
-
-        public Menu(string o_Name) : base(o_Name, null) { }
+        public Menu(string o_Name) : base(o_Name, null)
+        {
+        }
        
         public void ShowMenu()
         {
             Console.Clear();
             ExecuteMenuButton();
         }
-
-
     }
 }
