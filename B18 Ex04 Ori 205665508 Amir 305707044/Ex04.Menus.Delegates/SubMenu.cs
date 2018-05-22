@@ -71,10 +71,6 @@ namespace Ex04.Menus.Delegates
             {
                 m_ButtonParent.ExecuteMenuButton();
             }
-            else
-            {
-               // Environment.Exit(0);
-            }
         }
 
         private void showAllButtons()

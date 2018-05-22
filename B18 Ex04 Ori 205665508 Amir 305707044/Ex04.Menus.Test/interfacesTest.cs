@@ -8,7 +8,7 @@ using Ex04.Menus;
 namespace Ex04.Menus.Test
 {
 
-    class interfacesTest
+    public class interfacesTest
     {
 
         public static void RunInterFaceTest()

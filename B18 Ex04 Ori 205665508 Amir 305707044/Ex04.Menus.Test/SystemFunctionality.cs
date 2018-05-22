@@ -6,15 +6,23 @@ using System.Threading.Tasks;
 
 namespace Ex04.Menus.Test
 {
-    class VersionShower
+    public class SystemFunctionality
     {
+        public void showTime()
+        {
+            Console.WriteLine(DateTime.Now.ToShortTimeString());
+        }
+
+        public void showDate()
+        {
+            Console.WriteLine(DateTime.Now.Date.ToShortDateString());
+        }
+
         public void ShowVersion()
         {
             Console.WriteLine(" Version : 18.2.4.0");
         }
-    }
-    class Capitals
-    {
+
         public void CapitalLettersProcess()
         {
             string message = "there are {0} capital letters in your sentence.";
@@ -32,11 +40,6 @@ namespace Ex04.Menus.Test
             }
 
             Console.WriteLine(string.Format(message, countCapitalLetters));
-        }
-
-        public static implicit operator Capitals(DateShower v)
-        {
-            throw new NotImplementedException();
         }
     }
 }

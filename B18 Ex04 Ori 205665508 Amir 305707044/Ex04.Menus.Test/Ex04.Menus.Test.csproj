@@ -36,13 +36,14 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="SystemButtons\CapitalsBridge.cs" />
+    <Compile Include="SystemButtons\DateShowerBridge.cs" />
     <Compile Include="delegatesTests.cs" />
     <Compile Include="interfacesTest.cs" />
     <Compile Include="Program.cs" />
-    <Compile Include="TimeAndDateShowerBridge.cs" />
-    <Compile Include="TimeAndDateShower.cs" />
-    <Compile Include="versionAndCapitals.cs" />
-    <Compile Include="versionAndCapitalsBridge.cs" />
+    <Compile Include="SystemFunctionality.cs" />
+    <Compile Include="SystemButtons\TimeShowerBridge.cs" />
+    <Compile Include="SystemButtons\VersionBridge.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="System" />
@@ -57,6 +58,7 @@
       <Name>Ex04.Menus.Interfaces</Name>
     </ProjectReference>
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

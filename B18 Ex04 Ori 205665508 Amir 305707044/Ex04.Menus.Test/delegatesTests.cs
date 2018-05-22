@@ -6,29 +6,26 @@ using System.Threading.Tasks;
 
 namespace Ex04.Menus.Test
 {
-    class delegatesTests
+    public class delegatesTests
     {
         public static void runDelegatesTest()
         {
-            TimeShower timeObj = new TimeShower();
-            DateShower dateObj = new DateShower();
-            VersionShower versionObj = new VersionShower();
-            Capitals capitalsObj = new Capitals();
+            SystemFunctionality allFunctionality = new SystemFunctionality();
 
             Delegates.Menu mainMenu = new Delegates.Menu("main");
             Delegates.SubMenu timeAndDate = new Delegates.SubMenu("show Time/Date", mainMenu);
             Delegates.SubMenu versionAndCapitals = new Delegates.SubMenu("version and capitals", mainMenu);
             Delegates.FinalButton showTime = new Delegates.FinalButton("show time", timeAndDate);
-            showTime.Selected += timeObj.showTime;
+            showTime.Selected += allFunctionality.showTime;
 
             Delegates.FinalButton showDate = new Delegates.FinalButton("show Date", timeAndDate);
-            showDate.Selected += dateObj.showDate;
+            showDate.Selected += allFunctionality.showDate;
 
             Delegates.FinalButton CapitalLettersCount = new Delegates.FinalButton("Count capitals", versionAndCapitals);
-            CapitalLettersCount.Selected += capitalsObj.CapitalLettersProcess;
+            CapitalLettersCount.Selected += allFunctionality.CapitalLettersProcess;
 
             Delegates.FinalButton showVersion = new Delegates.FinalButton("show version", versionAndCapitals);
-            showVersion.Selected += versionObj.ShowVersion;
+            showVersion.Selected += allFunctionality.ShowVersion;
 
             mainMenu.AddMenuButton(timeAndDate);
             mainMenu.AddMenuButton(versionAndCapitals);
