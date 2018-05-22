@@ -14,4 +14,12 @@ namespace Ex04.Menus.Test
             timeObj.showTime();
         }
     }
+    class DateShowerBridge : Interfaces.IActionButtonListener
+    {
+        public void ExecuteAction()
+        {
+            DateShower dateObj = new DateShower();
+            dateObj.showDate();
+        }
+    }
 }

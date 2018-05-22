@@ -10,7 +10,14 @@ namespace Ex04.Menus.Test
     {
         public void showTime()
         {
-            Console.WriteLine(DateTime.Now.ToString());
+            Console.WriteLine(DateTime.Now.ToShortTimeString());
+        }
+    }
+    class DateShower
+    {
+        public void showDate()
+        {
+            Console.WriteLine(DateTime.Now.Date.ToShortDateString());
         }
     }
 }
