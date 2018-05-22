@@ -29,6 +29,10 @@ namespace Ex04.Menus.Delegates
             {
                 Selected.Invoke();
             }
+            else
+            {
+                throw new Exception("There are no callbacks!");
+            }
         }
     }
 }
