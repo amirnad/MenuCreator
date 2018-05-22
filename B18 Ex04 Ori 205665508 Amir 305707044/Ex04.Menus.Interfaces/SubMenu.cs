@@ -62,7 +62,7 @@ namespace Ex04.Menus.Interfaces
 
         private void executeChoice(uint i_UserChoice)
         {
-            int realButton = (int)i_UserChoice--;
+            int realButton = (int)i_UserChoice-1;
             if(i_UserChoice != k_LeaveSubMenu)
             {
                 m_SubMenuOptions[realButton].ExecuteMenuButton();
@@ -82,6 +82,7 @@ namespace Ex04.Menus.Interfaces
             const string k_Border = "==========================";
             StringBuilder subMenuMessage = new StringBuilder();
             subMenuMessage.AppendFormat("{0}{1}{2}", ButtonName, Environment.NewLine, k_Border);
+            Console.WriteLine(subMenuMessage);
             showSubButtons();
         }
 
@@ -89,8 +90,10 @@ namespace Ex04.Menus.Interfaces
         {
             StringBuilder menuButtons = new StringBuilder();
             const string k_BackMessage = "0. Back";
+            
             int menuOption;
             menuButtons.AppendFormat(k_BackMessage);
+            menuButtons.AppendFormat(Environment.NewLine);
             foreach (MenuBar button in m_SubMenuOptions)
             {
                 menuOption = m_SubMenuOptions.IndexOf(button);

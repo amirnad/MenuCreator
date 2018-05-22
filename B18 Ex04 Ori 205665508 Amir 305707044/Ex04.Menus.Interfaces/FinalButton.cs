@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Threading;
 
 namespace Ex04.Menus.Interfaces
 {
@@ -19,7 +20,9 @@ namespace Ex04.Menus.Interfaces
         {
             Console.Clear();
             r_ActionListener.ExecuteAction();
-            
+            Thread.Sleep(500);
+            Console.Clear();
+            m_ButtonParent.ExecuteMenuButton();
         }
     }
 }
