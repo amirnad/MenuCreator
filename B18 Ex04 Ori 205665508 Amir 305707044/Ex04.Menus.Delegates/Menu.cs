@@ -4,11 +4,10 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Ex04.Menus.Interfaces
+namespace Ex04.Menus.Delegates
 {
     public class Menu : SubMenu
     {
-
         public Menu(string o_Name) : base(o_Name, null) { }
        
         public void ShowMenu()
@@ -16,7 +15,5 @@ namespace Ex04.Menus.Interfaces
             Console.Clear();
             ExecuteMenuButton();
         }
-
-
     }
 }

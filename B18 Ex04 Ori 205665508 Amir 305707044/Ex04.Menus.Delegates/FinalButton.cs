@@ -5,24 +5,30 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Threading;
 
-namespace Ex04.Menus.Interfaces
+namespace Ex04.Menus.Delegates
 {
     public class FinalButton : MenuBar
     {
-        private readonly IActionButtonListener r_ActionListener;
+        public event Action Selected; 
 
-        public FinalButton(string o_Name, SubMenu o_Parent, IActionButtonListener i_Listener) :base(o_Name, o_Parent)
+        public FinalButton(string o_Name, SubMenu o_Parent) :base(o_Name, o_Parent)
         {
-            r_ActionListener = i_Listener;
         }
 
         public override void ExecuteMenuButton()
         {
             Console.Clear();
-            r_ActionListener.ExecuteAction();
+            OnSelected();
             Thread.Sleep(500);
             Console.Clear();
             m_ButtonParent.ExecuteMenuButton();
+        }
+        private void OnSelected()
+        {
+            if (Selected!= null)
+            {
+                Selected.Invoke();
+            }
         }
     }
 }
