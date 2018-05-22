@@ -11,7 +11,7 @@ namespace Ex04.Menus.Test
         public void ExecuteAction()
         {
             VersionShower versionObj = new VersionShower();
-            versionObj.showVersion();
+            versionObj.ShowVersion();
         }
     }
     class CapitalsBridge : Interfaces.IActionButtonListener
@@ -19,7 +19,7 @@ namespace Ex04.Menus.Test
         public void ExecuteAction()
         {
             Capitals capitalsObj = new Capitals();
-            capitalsObj.capitalLettersProcess();
+            capitalsObj.CapitalLettersProcess();
         }
     }
 }

@@ -73,7 +73,7 @@ namespace Ex04.Menus.Interfaces
             }
             else
             {
-                Environment.Exit(0);
+               // Environment.Exit(0);
             }
         }
 

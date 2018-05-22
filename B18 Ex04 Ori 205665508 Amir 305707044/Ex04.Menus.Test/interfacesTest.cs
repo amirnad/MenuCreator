@@ -10,11 +10,7 @@ namespace Ex04.Menus.Test
 
     class interfacesTest
     {
-        public static void Main()
-        {
-            //RunInterFaceTest();
-            delegatesTests.runDelegatesTest();
-        }
+
         public static void RunInterFaceTest()
         {
             Interfaces.Menu mainMenu = new Interfaces.Menu("main");
@@ -36,9 +32,6 @@ namespace Ex04.Menus.Test
 
             versionAndCapitals.AddMenuButton(showVersion);
             versionAndCapitals.AddMenuButton(CapitalLettersCount);
-
-
-
 
 
             mainMenu.ShowMenu();

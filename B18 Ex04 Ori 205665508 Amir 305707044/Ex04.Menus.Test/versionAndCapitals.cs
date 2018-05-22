@@ -8,17 +8,17 @@ namespace Ex04.Menus.Test
 {
     class VersionShower
     {
-        public void showVersion()
+        public void ShowVersion()
         {
             Console.WriteLine(" Version : 18.2.4.0");
         }
     }
     class Capitals
     {
-        public void capitalLettersProcess()
+        public void CapitalLettersProcess()
         {
             string message = "there are {0} capital letters in your sentence.";
-            int count = 0;
+            int countCapitalLetters = 0;
             Console.WriteLine("please enter a sentence and then press enter");
             string str = Console.ReadLine();
             char[] charArrForString = str.ToCharArray();
@@ -27,11 +27,11 @@ namespace Ex04.Menus.Test
             {
                 if (char.IsUpper(c))
                 {
-                    count++;
+                    countCapitalLetters++;
                 }
             }
 
-            Console.WriteLine(string.Format(message, count));
+            Console.WriteLine(string.Format(message, countCapitalLetters));
         }
 
         public static implicit operator Capitals(DateShower v)

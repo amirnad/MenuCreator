@@ -9,7 +9,7 @@ namespace Ex04.Menus.Delegates
 {
     public class FinalButton : MenuBar
     {
-        public event Action OnSelected; 
+        public event Action Selected; 
 
         public FinalButton(string o_Name, SubMenu o_Parent) :base(o_Name, o_Parent)
         {
@@ -18,10 +18,17 @@ namespace Ex04.Menus.Delegates
         public override void ExecuteMenuButton()
         {
             Console.Clear();
-            OnSelected.Invoke();
+            OnSelected();
             Thread.Sleep(500);
             Console.Clear();
             m_ButtonParent.ExecuteMenuButton();
+        }
+        private void OnSelected()
+        {
+            if (Selected!= null)
+            {
+                Selected.Invoke();
+            }
         }
     }
 }

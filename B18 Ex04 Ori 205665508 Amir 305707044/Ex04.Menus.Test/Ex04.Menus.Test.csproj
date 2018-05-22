@@ -38,8 +38,9 @@
   <ItemGroup>
     <Compile Include="delegatesTests.cs" />
     <Compile Include="interfacesTest.cs" />
-    <Compile Include="TimeShowerBridge.cs" />
-    <Compile Include="TimeShower.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="TimeAndDateShowerBridge.cs" />
+    <Compile Include="TimeAndDateShower.cs" />
     <Compile Include="versionAndCapitals.cs" />
     <Compile Include="versionAndCapitalsBridge.cs" />
   </ItemGroup>
