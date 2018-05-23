@@ -1,0 +1,10 @@
+==========================Exercise Checking Report==========================
+Exercise No...........: 04
+First Student Details.: 205665508 - Ori Lerman
+Second Student Details: 305707044 - Amir Nadav
+Delivery Date.........: 22/05/2048
+Delivered In Delay....: No
+Delay Reason..........: 
+Visual Studio Version.: 2015
+Comments..............: <Comments>
+=======================End Exercise Checking Report=========================
